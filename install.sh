@@ -27,6 +27,14 @@ while read df; do
 done
 
 (
+    echo "Running initial setup commands..."
+
+    echo "Setting up dd-source..."
+    setup-repo dd-source
+
+    echo "Setting up dogweb..."
+    setup-repo dogweb
+
     echo "Installing weekly setup-repo dogweb cronjob..."
     sudo cp /home/bits/dotfiles/resource/crontab /etc/crontab
     sudo chown root:root /etc/crontab
