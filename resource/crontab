@@ -1,0 +1,6 @@
+# /etc/crontab
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Run every Monday at 8:00 AM as 'bits'
+0 8 * * 1 bits setup-repo dogweb

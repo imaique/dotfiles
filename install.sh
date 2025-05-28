@@ -25,3 +25,9 @@ while read df; do
   mkdir -p "$(dirname "$link")"
   ln -sf "$df" "$link"
 done
+
+(
+    echo "Installing weekly setup-repo dogweb cronjob..."
+    sudo cp /home/bits/dotfiles/resource/crontab /etc/crontab
+    sudo chown root:root /etc/crontab
+) > /home/bits/dotfiles_install.log
